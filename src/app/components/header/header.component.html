@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid px-md-5">
+        <a class="navbar-brand" href="#">Associazione Festeggiamenti Lugnano</a>
+
+        <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" [ngbCollapse]="!isMenuCollapsed">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">La Storia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">La Madonnina</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Eventi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sponsor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contatti</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
