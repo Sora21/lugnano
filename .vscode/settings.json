@@ -1,8 +1,0 @@
-{
-    "files.exclude": {
-        ".angular": true,
-        "node_modules": true
-    },
-    "git.enabled": false,
-    "terminal.integrated.fontSize": 16
-}
