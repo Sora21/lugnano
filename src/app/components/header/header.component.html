@@ -7,24 +7,24 @@
         </button>
 
         <div class="collapse navbar-collapse" [ngbCollapse]="!isMenuCollapsed">
-            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <ul ngbNav [(activeId)]="active" class="navbar-nav ms-auto mb-2 mb-md-0">
+                <li [ngbNavItem]="1">
+                    <a ngbNavLink aria-current="page" href="#">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">La Storia</a>
+                <li [ngbNavItem]="2">
+                    <a ngbNavLink href="#">La Storia</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">La Madonnina</a>
+                <li [ngbNavItem]="3">
+                    <a ngbNavLink href="#">La Madonnina</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Eventi</a>
+                <li [ngbNavItem]="4">
+                    <a ngbNavLink href="#">Eventi</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sponsor</a>
+                <li [ngbNavItem]="5">
+                    <a ngbNavLink href="#">Sponsor</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contatti</a>
+                <li [ngbNavItem]="6">
+                    <a ngbNavLink href="#">Contatti</a>
                 </li>
             </ul>
         </div>
