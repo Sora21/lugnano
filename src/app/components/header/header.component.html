@@ -1,11 +1,29 @@
-<nav id="header-nav" class="navbar navbar-expand-md navbar-dark fixed-top bg-primary py-4">
+<!-- <nav id="header-nav" class="navbar navbar-expand-md navbar-dark fixed-top bg-primary py-4">
     <div class="container-fluid container-lg">
-        <a class="navbar-brand" href="#">Associazione Festeggiamenti
-            Lugnano</a>
+        <a class="navbar-brand" href="#">
+            Associazione Festeggiamenti Lugnano
+        </a>
 
-        <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="ms-auto mt-2 ms-sm-0 mt-sm-0">
+            <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div class="d-flex _flex-row align-items-center justify-content-between w-100 flex-wrap">
+            <div class="d-flex flex-wrap">
+                <a class="navbar-brand" href="#">
+                    Associazione Festeggiamenti Lugnano
+                </a>
+            </div>
+
+
+            <div class="_ms-auto">
+                <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
 
         <div class="collapse navbar-collapse" [ngbCollapse]="!isMenuCollapsed">
             <ul ngbNav [(activeId)]="active" class="navbar-nav ms-auto mb-2 mb-md-0">
@@ -31,4 +49,37 @@
         </div>
 
     </div>
-</nav>
+</nav> -->
+
+
+<header id="header-nav"
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom fixed-top bg-primary">
+    <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-white text-decoration-none">
+        <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"> -->
+        Associazione Festeggiamenti Lugnano
+        <!-- <use xlink:href="#bootstrap"></use> -->
+        <!-- </svg> -->
+    </a>
+
+    <ul ngbNav [(activeId)]="active" class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li [ngbNavItem]="1">
+            <a ngbNavLink (click)="scrollTop()" class="text-white">Home</a>
+        </li>
+        <li [ngbNavItem]="2">
+            <a ngbNavLink (click)="scrollTo('storia')" class="text-white">La Storia</a>
+        </li>
+        <li [ngbNavItem]="3">
+            <a ngbNavLink (click)="scrollTo('madonnina')" class="text-white">La Madonnina</a>
+        </li>
+        <li [ngbNavItem]="4">
+            <a ngbNavLink (click)="scrollTo('eventi')" class="text-white">Eventi</a>
+        </li>
+        <li [ngbNavItem]="5">
+            <a ngbNavLink (click)="scrollTo('sponsor')" class="text-white">Sponsor</a>
+        </li>
+        <li [ngbNavItem]="6">
+            <a ngbNavLink (click)="scrollBottom()" class="text-white">Contatti</a>
+        </li>
+    </ul>
+
+</header>

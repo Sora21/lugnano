@@ -1,32 +1,37 @@
 w-storia {
     section {
-        scroll-margin: 6.25rem
+        scroll-margin: 9.5rem;
+
+        @include media-breakpoint-up(sm) {
+            scroll-margin: 7rem;
+        }
+
+        @include media-breakpoint-up(md) {
+            scroll-margin: 5.5rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            scroll-margin: 5.2rem;
+        }
     }
 }
 
 w-madonnina,
 w-eventi,
-w-sponsor,
-w-contatti {
+w-sponsor {
     section {
-        scroll-margin: 4rem
+        scroll-margin: 8.7rem;
+
+        @include media-breakpoint-up(sm) {
+            scroll-margin: 6.5rem;
+        }
+
+        @include media-breakpoint-up(md) {
+            scroll-margin: 4.5rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            scroll-margin: 4.2rem;
+        }
     }
 }
-
-// w-eventi, w-madonnina {
-//     section {
-//         scroll-margin: 6.25rem
-//     }
-// }
-
-// w-sponsor {
-//     section {
-//         scroll-margin: 6.25rem
-//     }
-// }
-
-// w-contatti {
-//     section {
-//         scroll-margin: 6.25rem
-//     }
-// }

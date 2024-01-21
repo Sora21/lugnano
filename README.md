@@ -16,13 +16,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Deploy on Github Pages
 ```ng build --output-path gh-pages --base-href /lugnano/```  
-When the build is complete, make a copy of docs/index.html and name it docs/404.html  
+When the build is complete, extract all files from docs/browser to docs/ 
 Commit your changes and push
 
-On the GitHub project page, go to Settings and select the Pages option from the left sidebar to configure the site to publish from the docs folder.  
-Click Save.
-
-Click on the GitHub Pages link at the top of the GitHub Pages section to see your deployed application. The format of the link is https://sora21.github.io/lugnano  
+Go to https://sora21.github.io/lugnano  
 
 <!-- ## Further help
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page. -->

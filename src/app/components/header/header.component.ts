@@ -31,13 +31,23 @@ export class HeaderComponent {
     }
 
     scrollTo(elementId: string) {
+        // this.resetMobileMenu();
         document.getElementById("#" + elementId)?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-
-        return false;
     }
 
     scrollTop() {
+        // this.resetMobileMenu();
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    scrollBottom() {
+        // this.resetMobileMenu();
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    resetMobileMenu() {
+        if (this.isMenuCollapsed)
+            this.isMenuCollapsed = false;
     }
 
 }
