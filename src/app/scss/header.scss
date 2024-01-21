@@ -1,0 +1,13 @@
+w-header {
+
+    nav {
+        @extend .shadow;
+
+        transition: background .3s ease-in-out, padding-top .3s ease-in-out, padding-bottom .3s;
+
+        &.nav-scroll {
+            @extend .py-2;
+            opacity: 95%;
+        }
+    }
+}

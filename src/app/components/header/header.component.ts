@@ -11,4 +11,33 @@ import { NgbCollapse, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 export class HeaderComponent {
     isMenuCollapsed = false;
     active = 1;
+
+    ngAfterViewInit() {
+        document.addEventListener('scroll', this.onPageScroll, true);
+    }
+
+    ngOnDestroy() {
+        document.removeEventListener('scroll', this.onPageScroll);
+    }
+
+    onPageScroll(event: Event) {
+        if (document.documentElement.scrollTop > 90) {
+            if (!document.getElementById("header-nav")?.classList.contains('nav-scroll')) {
+                document.getElementById("header-nav")?.classList.add('nav-scroll');
+            }
+        } else {
+            document.getElementById("header-nav")?.classList.remove('nav-scroll');
+        }
+    }
+
+    scrollTo(elementId: string) {
+        document.getElementById("#" + elementId)?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+
+        return false;
+    }
+
+    scrollTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
 }
