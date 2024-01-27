@@ -8,6 +8,9 @@ header.masthead {
     text-align: center;
     color: $white;
     background-image: url("/assets/img/header-bg.jpg");
+    // background-image: url("/assets/img/header-bg.jpg"),
+    //     linear-gradient(to top, rgba(255, 255, 255, 0.39), rgba(0, 0, 0, 0.95));
+    // background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
