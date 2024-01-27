@@ -15,7 +15,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Deploy on Github Pages
-```ng build --output-path gh-pages --base-href /lugnano/```  
+```ng build --output-path docs --base-href /lugnano/```  
 When the build is complete, extract all files from docs/browser to docs/ 
 Commit your changes and push
 
