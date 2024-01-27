@@ -22,12 +22,6 @@ export class HomeComponent {
     lock = faLock;
 
     ngAfterViewInit() {
-        // Shrink the navbar 
-        this.navbarShrinkFn();
-
-        // Shrink the navbar when page is scrolled
-        document.addEventListener('scroll', this.navbarShrinkFn);
-
         //  Activate Bootstrap scrollspy on the main nav element
         const navHeader = document.body.querySelector('#nav-header');
         if (navHeader) {
@@ -37,52 +31,5 @@ export class HomeComponent {
                 smoothScroll: true,
             });
         };
-
-        // Collapse responsive navbar when toggler is visible
-        const navbarToggler = document.body.querySelector('.navbar-toggler');
-        const responsiveNavItems = [].slice.call(
-            document.querySelectorAll('#navbarResponsive .nav-link')
-        );
-        responsiveNavItems.map(function (responsiveNavItem) {
-            //@ts-ignore
-            responsiveNavItem.addEventListener('click', () => {
-                //@ts-ignore
-                if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                    //@ts-ignore
-                    navbarToggler.click();
-                }
-            });
-        });
-
     }
-
-    ngOnDestroy() {
-        document.removeEventListener('scroll', this.navbarShrinkFn);
-
-        // const responsiveNavItems = [].slice.call(
-        //     document.querySelectorAll('#navbarResponsive .nav-link')
-        // );
-    }
-
-    navbarShrinkFn() {
-        // Navbar shrink function
-        const navbarCollapsible = document.body.querySelector('#nav-header');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
-    }
-
-    // navbarResponsiveNavItemFn(responsiveNavItem, navbarToggler: HTMLElement) {
-    //     responsiveNavItem.addEventListener('click', () => {
-    //         if (window.getComputedStyle(navbarToggler).display !== 'none') {
-    //             navbarToggler.click();
-    //         }
-    //     });
-    // }
-
 }
