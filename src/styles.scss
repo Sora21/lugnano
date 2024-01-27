@@ -1,10 +1,12 @@
 // Styles
 
 // Import variables
-@import "./app/scss/variables.scss";
+@import "./app/scss/typography.scss";
 
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap.scss";
+// Import any Bootstrap Overridden file
+@import "./app/scss/overrides/variables.scss";
 
 // Global CSS
 @import "./app/scss/global.scss";
