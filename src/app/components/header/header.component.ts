@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbCollapse, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { ScrollSpy } from 'bootstrap';
 
 @Component({
     selector: 'w-header',
@@ -9,45 +10,70 @@ import { NgbCollapse, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
     styles: ``
 })
 export class HeaderComponent {
-    isMenuCollapsed = false;
-    active = 1;
+    // navbarToggler: HTMLElement;
 
     ngAfterViewInit() {
-        document.addEventListener('scroll', this.onPageScroll, true);
+        // Shrink the navbar 
+        this.navbarShrinkFn();
+
+        // Shrink the navbar when page is scrolled
+        document.addEventListener('scroll', this.navbarShrinkFn);
+
+        //  Activate Bootstrap scrollspy on the main nav element
+        const navHeader = document.body.querySelector('#nav-header');
+        if (navHeader) {
+            new ScrollSpy(document.body, {
+                target: navHeader,
+                rootMargin: '0px 0px -40%',
+                smoothScroll: true,
+            });
+        };
+
+        // Collapse responsive navbar when toggler is visible
+        const navbarToggler = document.body.querySelector('.navbar-toggler');
+        const responsiveNavItems = [].slice.call(
+            document.querySelectorAll('#navbarResponsive .nav-link')
+        );
+        responsiveNavItems.map(function (responsiveNavItem) {
+            //@ts-ignore
+            responsiveNavItem.addEventListener('click', () => {
+                //@ts-ignore
+                if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                    //@ts-ignore
+                    navbarToggler.click();
+                }
+            });
+        });
+
     }
 
     ngOnDestroy() {
-        document.removeEventListener('scroll', this.onPageScroll);
+        document.removeEventListener('scroll', this.navbarShrinkFn);
+
+        // const responsiveNavItems = [].slice.call(
+        //     document.querySelectorAll('#navbarResponsive .nav-link')
+        // );
     }
 
-    onPageScroll(event: Event) {
-        if (document.documentElement.scrollTop > 90) {
-            if (!document.getElementById("header-nav")?.classList.contains('nav-scroll')) {
-                document.getElementById("header-nav")?.classList.add('nav-scroll');
-            }
+    navbarShrinkFn() {
+        // Navbar shrink function
+        const navbarCollapsible = document.body.querySelector('#nav-header');
+        if (!navbarCollapsible) {
+            return;
+        }
+        if (window.scrollY === 0) {
+            navbarCollapsible.classList.remove('navbar-shrink')
         } else {
-            document.getElementById("header-nav")?.classList.remove('nav-scroll');
+            navbarCollapsible.classList.add('navbar-shrink')
         }
     }
 
-    scrollTo(elementId: string) {
-        // this.resetMobileMenu();
-        document.getElementById("#" + elementId)?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-    }
-
-    scrollTop() {
-        // this.resetMobileMenu();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    scrollBottom() {
-        // this.resetMobileMenu();
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
-
-    resetMobileMenu() {
-        if (this.isMenuCollapsed)
-            this.isMenuCollapsed = false;
-    }
+    // navbarResponsiveNavItemFn(responsiveNavItem, navbarToggler: HTMLElement) {
+    //     responsiveNavItem.addEventListener('click', () => {
+    //         if (window.getComputedStyle(navbarToggler).display !== 'none') {
+    //             navbarToggler.click();
+    //         }
+    //     });
+    // }
 
 }
