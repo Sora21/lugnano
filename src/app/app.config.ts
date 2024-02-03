@@ -1,15 +1,15 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter, withInMemoryScrolling } from '@angular/router';
+import { TitleStrategy, provideRouter, withInMemoryScrolling, withViewTransitions } from '@angular/router';
 
 import { routes } from './app.routes';
+import { TemplatePageTitleStrategy } from './utils/templatePageTitleStrategy';
 
 export const appConfig: ApplicationConfig = {
     providers: [
         provideRouter(routes,
-            withInMemoryScrolling({
-                anchorScrolling: 'enabled',
-                // scrollPositionRestoration: 'top'
-            }),
-        )
+            withInMemoryScrolling({ anchorScrolling: 'enabled', /* scrollPositionRestoration: 'top' */ }),
+            withViewTransitions()
+        ),
+        { provide: TitleStrategy, useClass: TemplatePageTitleStrategy }
     ]
 };

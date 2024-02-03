@@ -2,11 +2,33 @@
 // Typography
 //
 
+@font-face {
+    font-family: lato;
+    src:
+        // url('prime_light-webfont.eot?#iefix') format('embedded-opentype'),
+        // url('prime_light-webfont.woff') format('woff'),
+        url('/assets/fonts/Lato/Lato-Regular.ttf') format('truetype'),
+        // url('prime_light-webfont.svg#primelight') format('svg')
+    ;
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: roboto;
+    src:
+        // url('prime_light-webfont.eot?#iefix') format('embedded-opentype'),
+        // url('prime_light-webfont.woff') format('woff'),
+        url('/assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype'),
+        // url('prime_light-webfont.svg#primelight') format('svg')
+    ;
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 // Override the default Bootstrap base font family
-// 
-// Roboto Slab is being used below and is brought in
-// via Google fonts in the head of src/pug/index.pug.
-// The fonts listed afterwards are fallbacks.
 
 $font-family-base: "Roboto Slab",
     -apple-system,

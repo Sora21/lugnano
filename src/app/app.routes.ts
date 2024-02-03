@@ -4,5 +4,5 @@ import { StoriaComponent } from './pages/storia/storia.component';
 
 export const routes: Routes = [
     { path: '', title: 'Home', component: HomeComponent },
-    { path: 'storia-page', component: StoriaComponent },
+    { path: 'storia-page', title: 'Storia', component: StoriaComponent },
 ];
