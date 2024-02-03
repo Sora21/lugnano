@@ -7,7 +7,7 @@ import { TemplatePageTitleStrategy } from './utils/templatePageTitleStrategy';
 export const appConfig: ApplicationConfig = {
     providers: [
         provideRouter(routes,
-            withInMemoryScrolling({ anchorScrolling: 'disabled', scrollPositionRestoration: 'enabled' }),
+            withInMemoryScrolling({ anchorScrolling: 'disabled', scrollPositionRestoration: 'disabled' }),
             withViewTransitions()
         ),
         { provide: TitleStrategy, useClass: TemplatePageTitleStrategy }
