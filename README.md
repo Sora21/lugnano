@@ -17,6 +17,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Deploy on Github Pages
 ```ng build --output-path docs --base-href /lugnano/```  
 When the build is complete, extract all files from docs/browser to docs/ 
+TEMP: change all '/assets/' to './assets/'
 Commit your changes and push
 
 Go to https://sora21.github.io/lugnano  
