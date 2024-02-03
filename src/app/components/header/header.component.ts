@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { NgbCollapse, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
-import { Subscription, filter } from 'rxjs';
 
 @Component({
     selector: 'w-header',
@@ -14,8 +13,10 @@ import { Subscription, filter } from 'rxjs';
     styles: ``
 })
 export class HeaderComponent {
-    isHomeLayout = false;
-    isHomeEventSubscription: Subscription;
+    // isHomeLayout = false;
+    // isHomeEventSubscription: Subscription;
+
+    isCollapsed = true;
 
     bars = faBars;
 
@@ -23,13 +24,13 @@ export class HeaderComponent {
 
     constructor(private router: Router) { }
 
-    ngOnInit() {
-        this.isHomeEventSubscription = this.router.events.pipe(
-            filter((event) => event instanceof NavigationEnd)
-        ).subscribe((event) => {
-            this.isHomeLayout = this.HEADER_URL.includes((event as NavigationEnd).url);
-        });
-    }
+    // ngOnInit() {
+    //     this.isHomeEventSubscription = this.router.events.pipe(
+    //         filter((event) => event instanceof NavigationEnd)
+    //     ).subscribe((event) => {
+    //         this.isHomeLayout = this.HEADER_URL.includes((event as NavigationEnd).url);
+    //     });
+    // }
 
     ngAfterViewInit() {
         // Shrink the navbar 
@@ -58,7 +59,7 @@ export class HeaderComponent {
 
     ngOnDestroy() {
         document.removeEventListener('scroll', this.navbarShrinkFn);
-        this.isHomeEventSubscription.unsubscribe();
+        // this.isHomeEventSubscription.unsubscribe();
     }
 
     // Navbar shrink function

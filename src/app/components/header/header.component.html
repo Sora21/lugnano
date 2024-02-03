@@ -6,13 +6,14 @@
             Associazione Festeggiamenti<br>Lugnano
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" (click)="headerCollapse.toggle()"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="navbarResponsive" aria-label="Toggle navigation">
             Menu
             <fa-icon [icon]="bars" class="ms-1"></fa-icon>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div #headerCollapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="collapse navbar-collapse"
+            id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="#" routerLink="/home" routerLinkActive="active"
