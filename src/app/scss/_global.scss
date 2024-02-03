@@ -1,6 +1,4 @@
-// 
 // Global theme styling
-// 
 
 // Scroll padding for all scroll targets on page used with
 // native CSS smooth scrolling
@@ -18,13 +16,11 @@ body {
 }
 
 // Adjust the line height of paragraphs
-
 p {
     line-height: $line-height-lg;
 }
 
 // Spacing and heading styling for page sections
-
 .page-section {
     padding: 6rem 0;
 
@@ -48,6 +44,6 @@ p {
 
 @include media-breakpoint-up(md) {
     section {
-        padding: 9rem 0;
+        padding: 4rem 0;
     }
 }

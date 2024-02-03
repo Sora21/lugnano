@@ -4,12 +4,13 @@
 <!-- Background image -->
 <header class="masthead">
     <div class="container">
-        <div class="masthead-subheading animate__animated animate__fadeInLeft">
-            Benvenuti a
+        <div
+            class="masthead-subheading animate__animated animate__fadeInLeft {{isSubHeadingVisible ? '' : 'invisible'}}">
+            {{subHeading}}
         </div>
         <div class="masthead-heading text-uppercase animate__animated animate__fadeInRight"
             style="animation-delay: .5s;">
-            Lugnano
+            {{heading}}
         </div>
 
         <a class="btn btn-primary btn-xl text-uppercase" href="#team">Chi siamo</a>

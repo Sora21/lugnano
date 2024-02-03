@@ -33,14 +33,14 @@ export class HomeComponent {
 
     ngAfterViewInit() {
         //  Activate Bootstrap scrollspy on the main nav element
-        const navHeader = document.body.querySelector('#nav-header');
-        if (navHeader) {
-            new ScrollSpy(document.body, {
-                target: navHeader,
-                rootMargin: '0px 0px -40%',
-                smoothScroll: true,
-            });
-        };
+        // const navHeader = document.body.querySelector('#nav-header');
+        // if (navHeader) {
+        //     new ScrollSpy(document.body, {
+        //         target: navHeader,
+        //         rootMargin: '0px 0px -40%',
+        //         smoothScroll: true,
+        //     });
+        // };
     }
 
     validate(input: Event, isRemovingValidation = false) {

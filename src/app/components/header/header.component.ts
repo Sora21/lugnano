@@ -74,12 +74,4 @@ export class HeaderComponent {
         }
     }
 
-    // navbarResponsiveNavItemFn(responsiveNavItem, navbarToggler: HTMLElement) {
-    //     responsiveNavItem.addEventListener('click', () => {
-    //         if (window.getComputedStyle(navbarToggler).display !== 'none') {
-    //             navbarToggler.click();
-    //         }
-    //     });
-    // }
-
 }
