@@ -15,3 +15,6 @@ cp docs/index.html docs/404.html
 # Fix assets reference
 STYLES_FILE=$(find docs -name 'styles*css')
 sed -i '' 's/\/assets/\.\/assets/g' $STYLES_FILE
+
+# Bump npm version
+npm version patch --no-git-tag-version
