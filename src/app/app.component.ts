@@ -5,6 +5,7 @@ import { faFacebookF, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-s
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 import packageJson from '../../package.json';
+import { DEFAULT_SUB_HEADING } from './app.routes';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from "./components/header/header.component";
 
@@ -34,6 +35,7 @@ export class AppComponent {
 
                 if (!route.data['subHeading']) {
                     this.isSubHeadingVisible = false;
+                    this.subHeading = DEFAULT_SUB_HEADING;
                 } else {
                     this.isSubHeadingVisible = true;
                     this.subHeading = route.data['subHeading'];
