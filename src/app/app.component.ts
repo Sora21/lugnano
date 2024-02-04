@@ -4,8 +4,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faFacebookF, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
+import packageJson from '../../package.json';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from "./components/header/header.component";
+
 
 @Component({
     selector: 'app-root',
@@ -40,6 +42,8 @@ export class AppComponent {
                 this.heading = route.data['heading'];
             }
         });
+
+        console.log("Version: " + packageJson.version);
     }
 
     ngOnDestroy() {
