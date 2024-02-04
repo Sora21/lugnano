@@ -13,4 +13,5 @@ rm -r docs/browser
 cp docs/index.html docs/404.html
 
 # Fix assets reference
-sed -i -e 's/abc/XYZ/g' /tmp/file.txt
+STYLES_FILE=$(find docs -name 'styles*css')
+sed -i '' 's/\/assets/\.\/assets/g' $STYLES_FILE
