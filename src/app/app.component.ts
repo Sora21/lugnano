@@ -22,6 +22,8 @@ export class AppComponent {
     facebook = faFacebookF;
     linkedin = faLinkedinIn;
 
+    isHomePage: boolean;
+
     heading: string;
     subHeading: string;
     isSubHeadingVisible: boolean = true;
@@ -32,6 +34,8 @@ export class AppComponent {
         this.headingsSubscription = router.events.subscribe(event => {
             if (event instanceof RoutesRecognized) {
                 let route = event.state.root.firstChild;
+
+                this.isHomePage = route.routeConfig.path == '';
 
                 if (!route.data['subHeading']) {
                     this.isSubHeadingVisible = false;
