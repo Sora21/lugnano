@@ -25,7 +25,12 @@
         "lib": [
             "ES2022",
             "dom"
-        ]
+        ],
+        // "paths": {
+        //     "photoswipe/lightbox": [
+        //         "./node_modules/photoswipe/dist/types/photoswipe.d.ts"
+        //     ]
+        // }
     },
     "angularCompilerOptions": {
         "enableI18nLegacyMessageIdFormat": false,
