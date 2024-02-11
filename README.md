@@ -16,4 +16,5 @@ Go to https://sora21.github.io/lugnano
 - bootstrap: ^5.3.2
 - typescript: ~5.3.2
 - animate.css: ^4.1.1
+- animate on scroll: ^2.3.4
 - photoswipe: ^5.4.3

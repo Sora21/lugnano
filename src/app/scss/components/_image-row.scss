@@ -5,6 +5,11 @@ w-image-row {
     }
 
     .image-row-height-lg {
+
+        @include media-breakpoint-up(xl) {
+            height: 53rem;
+        }
+
         @include media-breakpoint-only(xl) {
             height: 45.5rem;
         }
@@ -23,6 +28,10 @@ w-image-row {
     }
 
     .image-row-height-sm {
+        @include media-breakpoint-up(xl) {
+            height: 39.751rem;
+        }
+
         @include media-breakpoint-only(xl) {
             height: 34.125rem;
         }

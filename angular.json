@@ -37,11 +37,13 @@
                         ],
                         "styles": [
                             "node_modules/animate.css/animate.min.css",
+                            "node_modules/aos/dist/aos.css",
                             "node_modules/photoswipe/dist/photoswipe.css",
                             "src/styles.scss"
                         ],
                         "scripts": [],
                         "allowedCommonJsDependencies": [
+                            "aos",
                             "dayjs"
                         ]
                     },
