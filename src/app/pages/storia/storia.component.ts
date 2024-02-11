@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import Aos from "aos";
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import { ImageRowComponent } from '../../components/image-row/image-row.component';
+import { aosInit } from '../../utils/aos-utils';
 import { createPhotoswipeLightBox } from '../../utils/photoswipe-utils';
 
 @Component({
@@ -20,7 +20,7 @@ export class StoriaComponent {
     }
 
     ngAfterViewInit() {
-        Aos.init({ startEvent: 'load' });
+        aosInit();
     }
 
     ngOnDestroy() {
