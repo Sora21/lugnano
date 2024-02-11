@@ -10,7 +10,7 @@ export const DEFAULT_SUB_HEADING = 'Benvenuti a';
 export const routes: Routes = [
     { path: '', title: 'Home', component: HomeComponent, data: { subHeading: DEFAULT_SUB_HEADING, heading: 'Lugnano' } },
     { path: 'storia', title: 'La Storia', component: StoriaComponent, data: { heading: 'La Storia' } },
-    { path: 'madonnina', title: 'La Madonnina', component: MadonninaComponent, data: { heading: 'La Madonnina' } },
+    { path: 'madonnina', title: 'La Madonnina', component: MadonninaComponent, data: { heading: 'Madonna del Fiore' } },
     { path: 'eventi', title: 'Eventi', component: EventiComponent, data: { heading: 'Eventi' } },
     { path: 'sponsor', title: 'Sponsor', component: SponsorComponent, data: { heading: 'Sponsor' } },
 ];

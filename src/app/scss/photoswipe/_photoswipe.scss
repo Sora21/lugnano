@@ -1,0 +1,6 @@
+@import '../bootstrap/variables';
+
+// Override default background color
+.pswp__bg {
+    --pswp-bg: #0d6efd; //$primary;
+}

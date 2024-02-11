@@ -1,23 +1,20 @@
 import { Component } from '@angular/core';
-import PhotoSwipe from 'photoswipe';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import { ImageRowComponent } from "../../components/image-row/image-row.component";
+import { createPhotoswipeLightBox } from '../../utils/photoswipe-utils';
 
 @Component({
     selector: 'w-madonnina',
     standalone: true,
-    imports: [],
     templateUrl: './madonnina.component.html',
-    styles: ``
+    styles: ``,
+    imports: [ImageRowComponent]
 })
 export class MadonninaComponent {
     lightbox: PhotoSwipeLightbox;
 
     ngOnInit() {
-        this.lightbox = new PhotoSwipeLightbox({
-            gallery: '#madonnina-gallery',
-            children: 'a',
-            pswpModule: PhotoSwipe,
-        });
+        this.lightbox = createPhotoswipeLightBox('madonnina-gallery');
         this.lightbox.init();
     }
 
