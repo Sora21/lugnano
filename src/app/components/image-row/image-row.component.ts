@@ -10,6 +10,8 @@ import { Component, Input } from '@angular/core';
 export class ImageRowComponent {
     @Input() isLast: boolean = false;
 
+    @Input() normalizeHeightClass: 'sm' | 'lg';
+
     @Input() firstImage: {
         src: string,
         heigth: string,

@@ -38,9 +38,4 @@ p {
         font-family: $subheadings-font-family;
         margin-bottom: 4rem;
     }
-
-    .bg-image-subtle {
-        @extend .rounded;
-        background: $primary-bg-subtle;
-    }
 }
