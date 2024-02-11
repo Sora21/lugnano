@@ -8,8 +8,8 @@
 
         <button class="navbar-toggler" type="button" (click)="headerCollapse.toggle()"
             [attr.aria-expanded]="!isCollapsed" aria-controls="navbarResponsive" aria-label="Toggle navigation">
-            Menu
-            <fa-icon [icon]="bars" class="ms-1"></fa-icon>
+            <span class="d-none d-sm-inline">Menu</span>
+            <fa-icon [icon]="bars" class="ms-sm-1"></fa-icon>
         </button>
 
         <div #headerCollapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="collapse navbar-collapse"
