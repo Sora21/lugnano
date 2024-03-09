@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import { CarouselComponent } from '../../components/carousel-pause/carousel.component';
+import { CarouselComponent } from '../../components/carousel/carousel.component';
 import { createPhotoswipeLightBox } from '../../utils/photoswipe-utils';
 
 @Component({
