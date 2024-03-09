@@ -1,14 +1,16 @@
-<footer class="footer py-4">
-    <div class="container">
+<footer class="footer py-4 py-md-2">
+    <div class="container px-0">
 
-        <div class="row align-items-center">
-            <div class="col-lg-4 text-lg-start">
-                <!-- {{currentYear}} -->
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <img class="img-fluid" src="assets/img/logos/spiedini.jpg" alt="" style="height: 5.5rem;" />
+
+            <!-- Visible on md -->
+            <div class="d-none d-md-inline">
+                <p class="fs-5 lh-sm">Associazione Festeggiamenti Lugnano</p>
+                <b>{{currentYear}}</b>
             </div>
 
-            <div class="col-lg-4 my-3 my-lg-0">
-                <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i
-                        class="fab fa-twitter"></i></a> -->
+            <div class="my-3 my-md-0">
                 <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/associazionelugnano"
                     target="_blank" aria-label="Facebook">
                     <fa-icon [icon]="facebook"></fa-icon>
@@ -19,15 +21,13 @@
                 </a>
             </div>
 
-            <div class="col-lg-4 text-lg-end">
-                <!-- <b>{{currentYear}}</b> -->
-                <div class="d-inline">
-                    <p class="fs-5 lh-sm">Associazione Festeggiamenti Lugnano</p>
-                    <b>{{currentYear}}</b>
-                </div>
-                <!-- <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                <a class="link-dark text-decoration-none" href="#!">Terms of Use</a> -->
+            <!-- Mobile only text -->
+            <div class="d-inline d-md-none">
+                <p class="fs-5 lh-sm">Associazione Festeggiamenti Lugnano</p>
+                <b>{{currentYear}}</b>
             </div>
+
+
         </div>
 
     </div>

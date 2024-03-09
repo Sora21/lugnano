@@ -1,0 +1,12 @@
+<ngb-carousel #carousel [interval]="0" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus">
+
+    @for (img of images; track img; let i = $index) {
+    <ng-template ngbSlide>
+        <a class="thumbnail" attr.data-pswp-width="{{img.width}}" attr.data-pswp-height="{{img.height}}"
+            [href]="img.src" target="_blank">
+            <img class="rounded shadow carousel-image img-fluid" [src]="img.src" alt="..." />
+        </a>
+    </ng-template>
+    }
+
+</ngb-carousel>

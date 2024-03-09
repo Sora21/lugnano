@@ -13,9 +13,6 @@ import { NgbCollapse, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
     styles: ``
 })
 export class HeaderComponent {
-    // isHomeLayout = false;
-    // isHomeEventSubscription: Subscription;
-
     isCollapsed = true;
 
     bars = faBars;
@@ -23,14 +20,6 @@ export class HeaderComponent {
     HEADER_URL: string[] = ['/', '/#services', '/#portfolio', '/#about', '/#team', '/#contact'];
 
     constructor(private router: Router) { }
-
-    // ngOnInit() {
-    //     this.isHomeEventSubscription = this.router.events.pipe(
-    //         filter((event) => event instanceof NavigationEnd)
-    //     ).subscribe((event) => {
-    //         this.isHomeLayout = this.HEADER_URL.includes((event as NavigationEnd).url);
-    //     });
-    // }
 
     ngAfterViewInit() {
         // Shrink the navbar 
@@ -59,7 +48,6 @@ export class HeaderComponent {
 
     ngOnDestroy() {
         document.removeEventListener('scroll', this.navbarShrinkFn);
-        // this.isHomeEventSubscription.unsubscribe();
     }
 
     // Navbar shrink function
