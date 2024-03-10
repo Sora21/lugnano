@@ -1,6 +1,7 @@
 import { Component, Input, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbCarousel, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { Image } from '../../typings/image';
 
 @Component({
     selector: 'w-carousel',
@@ -10,11 +11,7 @@ import { NgbCarousel, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     styles: ``
 })
 export class CarouselComponent {
-    @Input() images: {
-        src: string,
-        width: string,
-        height: string
-    }[];
+    @Input() images: Image[];
 
     interval = 4000;
 

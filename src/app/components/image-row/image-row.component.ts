@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Image } from '../../typings/image';
 
 @Component({
     selector: 'w-image-row',
@@ -12,16 +13,7 @@ export class ImageRowComponent {
 
     @Input() normalizeHeightClass: 'sm' | 'lg';
 
-    @Input() firstImage: {
-        src: string,
-        heigth: string,
-        width: string
-    }
-
-    @Input() secondImage: {
-        src: string,
-        heigth: string,
-        width: string
-    }
+    @Input() firstImage: Image
+    @Input() secondImage: Image
 
 }

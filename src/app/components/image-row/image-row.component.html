@@ -1,7 +1,7 @@
 <div
     class="row py-3 {{isLast ? 'mt-4' : 'my-4'}} bg-image-subtle {{normalizeHeightClass ? 'image-row-height-' + normalizeHeightClass : ''}}">
     <div class="col-12 col-sm-6 align-self-center h-100">
-        <a class="thumbnail" attr.data-pswp-width="{{firstImage.width}}" attr.data-pswp-height="{{firstImage.heigth}}"
+        <a class="thumbnail" attr.data-pswp-width="{{firstImage.width}}" attr.data-pswp-height="{{firstImage.height}}"
             [href]="firstImage.src" target="_blank">
             <img class="h-100 w-100 rounded-top rounded-end-sm-0 rounded-start-sm object-fit-cover"
                 [src]="firstImage.src" alt="..." />
@@ -9,7 +9,7 @@
     </div>
 
     <div class="col-12 col-sm-6 mt-3 mt-sm-0 align-self-center h-100">
-        <a class="thumbnail" attr.data-pswp-width="{{secondImage.width}}" attr.data-pswp-height="{{secondImage.heigth}}"
+        <a class="thumbnail" attr.data-pswp-width="{{secondImage.width}}" attr.data-pswp-height="{{secondImage.height}}"
             [href]="secondImage.src" target="_blank">
             <img class="h-100 w-100 rounded-bottom rounded-start-sm-0 rounded-end-sm object-fit-cover"
                 [src]="secondImage.src" alt="..." />

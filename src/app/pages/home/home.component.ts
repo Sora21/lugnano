@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { FaIconComponent, FaStackComponent, FaStackItemSizeDirective } from '@fortawesome/angular-fontawesome';
-import { faFacebookF, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faCircle, faLaptop, faLock, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { ScrollSpy } from 'bootstrap';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import { Image } from '../../typings/image';
+import { createPhotoswipeLightBox } from '../../utils/photoswipe-utils';
 
 @Component({
     selector: 'w-home',
@@ -13,10 +14,6 @@ import { ScrollSpy } from 'bootstrap';
     styles: ``
 })
 export class HomeComponent {
-    twitter = faTwitter;
-    facebook = faFacebookF;
-    linkedin = faLinkedinIn;
-
     circle = faCircle;
     shoppingCart = faShoppingCart;
     laptop = faLaptop;
@@ -29,7 +26,21 @@ export class HomeComponent {
         message: ''
     });
 
+    associationGallery: PhotoSwipeLightbox;
+    associationImages: Image[] = [
+        { src: 'assets/img/associazione/45.jpg', width: '2048', height: '1536' },
+        { src: 'assets/img/associazione/44.jpg', width: '2048', height: '1536' },
+        { src: 'assets/img/associazione/43.jpg', width: '2048', height: '1365' },
+        { src: 'assets/img/associazione/38.jpg', width: '2048', height: '1115' },
+        { src: 'assets/img/associazione/38_2.jpg', width: '2048', height: '1439' }
+    ];
+
     constructor(private formBuilder: FormBuilder) { }
+
+    ngOnInit() {
+        this.associationGallery = createPhotoswipeLightBox('associazione-gallery');
+        this.associationGallery.init();
+    }
 
     ngAfterViewInit() {
         //  Activate Bootstrap scrollspy on the main nav element
@@ -41,6 +52,10 @@ export class HomeComponent {
         //         smoothScroll: true,
         //     });
         // };
+    }
+
+    ngOnDestroy() {
+        this.associationGallery.destroy();
     }
 
     validate(input: Event, isRemovingValidation = false) {
