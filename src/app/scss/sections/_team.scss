@@ -10,7 +10,7 @@
         width: 10rem;
         height: 10rem;
         // border: 0.5rem solid fade-out($primary, 0.9);
-        border: 0.5rem solid fade-out($yellow-700, 0.9);
+        border: 0.5rem solid fade-out($yellow-700, 0.7);
     }
 
     h4 {
@@ -34,7 +34,7 @@
     .image-gallery {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 0.625rem;
     }
 
     .image-gallery>li {

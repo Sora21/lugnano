@@ -15,7 +15,11 @@
                 amore e dedizione. Non possiamo dirvi altro se non di venirlo ad assaggiare... vi aspettiamo!</p>
         </div>
 
-        <ul id="associazione-gallery" class="image-gallery p-3 m-3 bg-image-subtle">
+    </div>
+
+
+    <div class="container-sm">
+        <ul id="associazione-gallery" class="image-gallery px-3 pt-3 pb-2 pb-sm-3 my-3 mx-sm-3 bg-image-subtle">
             @for (associationImg of associationImages; track associationImg; let i = $index) {
             <li>
                 <a class="thumbnail" attr.data-pswp-width="{{associationImg.width}}"
@@ -25,7 +29,10 @@
             </li>
             }
         </ul>
+    </div>
 
+
+    <div class="container">
         <div class="d-flex flex-column mt-4 mb-2">
             <div class="align-self-center align-self-md-end mb-3">
                 <p class="large text-muted">Tutto questo non sarebbe possibile senza di loro!</p>
