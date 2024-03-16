@@ -5,7 +5,8 @@
 #nav-header {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: rgba($gray-900, 0.9);
+    // background-color: rgba($gray-900, 0.9);
+    background-color: rgba($blue-800, 0.9);
 
     .navbar-toggler {
 
@@ -38,7 +39,7 @@
 
                 &.active,
                 &:hover {
-                    color: $primary;
+                    color: $yellow;
                 }
             }
         }
@@ -69,8 +70,8 @@
         &.navbar-shrink {
             padding-top: 1rem;
             padding-bottom: 1rem;
-            background-color: rgba($gray-900, 0.9);
-            // background-color: rgba($blue, 0.4);
+            // background-color: rgba($gray-900, 0.9);
+            background-color: rgba($blue-800, 0.9);
 
             .navbar-brand {
                 font-size: 1.25em;

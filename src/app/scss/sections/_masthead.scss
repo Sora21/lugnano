@@ -3,6 +3,8 @@
 //
 
 header.masthead {
+    @extend .rounded-bottom;
+
     padding-top: 6rem + 4.5rem;
     padding-bottom: 6rem + 4.301rem;
     text-align: center;

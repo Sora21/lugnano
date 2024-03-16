@@ -1,11 +1,6 @@
 w-image-row {
-    .bg-image-subtle {
-        @extend .rounded;
-        background: $primary-bg-subtle;
-    }
 
     .image-row-height-lg {
-
         @include media-breakpoint-up(xl) {
             height: 53rem;
         }

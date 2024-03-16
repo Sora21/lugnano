@@ -57,9 +57,9 @@ export class HeaderComponent {
             return;
 
         if (window.scrollY > 0) {
-            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.add('navbar-shrink', 'shadow', 'rounded-bottom')
         } else {
-            navbarCollapsible.classList.remove('navbar-shrink')
+            navbarCollapsible.classList.remove('navbar-shrink', 'shadow', 'rounded-bottom')
         }
     }
 
